@@ -36,6 +36,6 @@ public class Main {
             System.out.print(array[k] + array[k - 1] + " ");
             k += 2;
         } while (k < array.length);
-
+        System.out.print('\n');
     }
 }
