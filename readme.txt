@@ -5,3 +5,6 @@ se_01
 4	mvn exec:java -Dexec.mainClass="javase01.t04.Main" -Dexec.args="5"
 5	mvn exec:java -Dexec.mainClass="javase01.t05.Main" -Dexec.args="5 5"
 6	mvn exec:java -Dexec.mainClass="javase01.t06.main.Main"
+
+se_02
+1	mvn exec:java -Dexec.mainClass="javase02.t01.main.Main"
