@@ -9,6 +9,11 @@ se_01
 se_02
 1	mvn exec:java -Dexec.mainClass="javase02.t01.main.Main"
 2	mvn exec:java -Dexec.mainClass="javase02.t02.main.Main"
+3	mvn exec:java -Dexec.mainClass="javase02.t03.main.Main"
+4	mvn exec:java -Dexec.mainClass="javase02.t04.main.Main"
+5	mvn exec:java -Dexec.mainClass="javase02.t05.main.Main"
+6	mvn exec:java -Dexec.mainClass="javase02.t06.main.Main"
+7	mvn exec:java -Dexec.mainClass="javase02.t07.main.Main"
 
 se_03
 1	mvn exec:java -Dexec.mainClass="javase03.t01.main.Main"
