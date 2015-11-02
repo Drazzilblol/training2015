@@ -1,0 +1,14 @@
+new 9
+private 8
+static 1
+package 2
+import 3
+finally 3
+for 3
+while 3
+public 3
+else 1
+try 5
+catch 7
+class 2
+if 3
