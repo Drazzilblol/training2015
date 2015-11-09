@@ -61,8 +61,6 @@ public class FileExplorer {
             System.out.println("Write in: " + writeFile.getPath() + "\n");
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (RequireCorrectFileNameException e) {
-            System.out.println("please write correct file name");
         }
 
     }
