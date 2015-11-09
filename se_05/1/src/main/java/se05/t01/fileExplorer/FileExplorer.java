@@ -48,20 +48,23 @@ public class FileExplorer {
             System.out.println("Read in: " + readFile.getPath() + "\n" + string);
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (RequireCorrectFileNameException e) {
+            System.out.println("please write correct file name");
         }
+
     }
 
     public void writeFile(String fileName, String data) {
         try {
             File writeFile = new File(file.getPath() + "/" + fileName);
-            if (writeFile.isDirectory()) {
-                throw new RequireCorrectFileNameException("incorrect file name: " + fileName);
-            }
             FileUtils.writeStringToFile(writeFile, data, true);
             System.out.println("Write in: " + writeFile.getPath() + "\n");
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (RequireCorrectFileNameException e) {
+            System.out.println("please write correct file name");
         }
+
     }
 
     public void newDir(String directoryName) {
@@ -70,12 +73,16 @@ public class FileExplorer {
     }
 
     public void deleteFile(String fileName) {
-        File f = new File(file.getPath() + "/" + fileName);
-        if (!f.exists()) {
-            throw new RequireCorrectFileNameException("incorrect file name: " + fileName);
+        try {
+            File f = new File(file.getPath() + "/" + fileName);
+            if (!f.exists()) {
+                throw new RequireCorrectFileNameException("incorrect file name: " + fileName);
+            }
+            f.delete();
+            System.out.println("Deleted file: " + f.getPath() + "\n");
+        } catch (RequireCorrectFileNameException e) {
+            System.out.println("please write correct file name");
         }
-        f.delete();
-        System.out.println("Deleted file: " + f.getPath() + "\n");
     }
 
 }
